@@ -1,0 +1,27 @@
+shape_dic={1:"circle", 2:"rectangle", 3:"triangle"}
+user_input = float(input("enter 1 for circle ? :\n2 for rectangle ? :\nand 3 for traingle ? :"))
+def choose_shape(user_input):
+    if user_input == 1 :
+        return (shape_dic.get(1))
+    if user_input == 2 :
+        return (shape_dic.get(2))
+    if user_input == 3 :
+        return (shape_dic.get(3))
+
+def formula():
+    if choose_shape(user_input) == "circle":
+        return "C"
+    if choose_shape(user_input)== "rectangle":
+        return "R"
+    if choose_shape(user_input)== "triangle":
+        return "T"
+
+def shape_calculations():
+    if formula() == "C":
+        return "the area of the circle is %.2f" % ((float(input("enter diagonal x value :"))* 3.14)**2)
+    if formula() == "R":
+        return "the area of the rectangle is %.2f" % (float(input("enter rectangle x value :"))*float(input("enter rectangle y value :")))
+    if formula() == "T":
+        return "the area of the triangle is %.2f" % ((float(input("enter x value for triangle rule :"))*float(input("qnter y for triangle height :")))/2)
+
+print(shape_calculations())
